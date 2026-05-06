@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Registration</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#667eea,#764ba2);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:0;
+}
+
+.container {
+  background:white;
+  padding:25px;
+  border-radius:12px;
+  width:350px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align:center;
+  margin-bottom:15px;
+}
+
+input {
+  width:100%;
+  padding:10px;
+  margin:8px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
+}
+
+.gender {
+  display:flex;
+  justify-content:space-between;
+  margin:10px 0;
+}
+
+.gender label {
+  display:flex;
+  align-items:center;
+  gap:5px;
+}
+
+button {
+  width:100%;
+  padding:10px;
+  background:#ff7e5f;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+  margin-top:10px;
+}
+
+button:hover {
+  opacity:0.9;
+}
+
+.error {
+  color:red;
+  font-size:12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Registration Form</h2>
+
+<form id="regForm">
+
+<input type="text" id="fname" placeholder="First Name" required>
+<input type="text" id="lname" placeholder="Last Name" required>
+<input type="date" id="dob" required>
+
+<div class="gender">
+  <label><input type="radio" name="gender" value="Male" required> Male</label>
+  <label><input type="radio" name="gender" value="Female"> Female</label>
+</div>
+
+<input type="text" id="mobile" placeholder="Mobile Number">
+<div class="error" id="mobileError"></div>
+
+<input type="email" id="email" placeholder="Email Address">
+<div class="error" id="emailError"></div>
+
+<button type="submit">Register</button>
+
+</form>
+</div>
+
+<script>
+document.getElementById("regForm").addEventListener("submit", function(e){
+e.preventDefault();
+
+// Clear errors
+document.getElementById("mobileError").innerText = "";
+document.getElementById("emailError").innerText = "";
+
+let fname = document.getElementById("fname").value;
+let lname = document.getElementById("lname").value;
+let dob = document.getElementById("dob").value;
+let gender = document.querySelector('input[name="gender"]:checked')?.value;
+let mobile = document.getElementById("mobile").value.trim();
+let email = document.getElementById("email").value.trim();
+
+let isValid = true;
+
+// Gender check
+if(!gender){
+  alert("Please select gender");
+  return;
+}
+
+// Mobile validation
+if (mobile.length !== 10) {
+  document.getElementById("mobileError").innerText = "Must be exactly 10 digits";
+  isValid = false;
+} else if (!/^\d+$/.test(mobile)) {
+  document.getElementById("mobileError").innerText = "Only numbers allowed";
+  isValid = false;
+}
+
+// Email validation
+if (!/^\S+@\S+\.\S+$/.test(email)) {
+  document.getElementById("emailError").innerText = "Invalid email format";
+  isValid = false;
+}
+
+if (!isValid) return;
+
+// Store data
+let user = {fname,lname,dob,gender,mobile,email};
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+users.push(user);
+
+localStorage.setItem("users", JSON.stringify(users));
+
+// Redirect
+window.location.href = "display.html";
+
+});
+</script>
+
+</body>
+</html>
