@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Movie Booking Hub !</h1>
+</header>
+
+<div class="container">
+
+    <!-- Movie Selection -->
+    <h2>Select a Movie</h2>
+    <div class="movies">
+        <div class="movie-card" onclick="selectMovie('Avengers')">
+            <img src="https://via.placeholder.com/150">
+            <p>Avengers</p>
+        </div>
+
+        <div class="movie-card" onclick="selectMovie('Inception')">
+            <img src="https://via.placeholder.com/150">
+            <p>Inception</p>
+        </div>
+
+        <div class="movie-card" onclick="selectMovie('Interstellar')">
+            <img src="https://via.placeholder.com/150">
+            <p>Interstellar</p>
+        </div>
+    </div>
+
+    <!-- Booking Form -->
+    <h2>Book Tickets</h2>
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Enter Name" required>
+
+        <input type="text" id="selectedMovie" placeholder="Selected Movie" readonly>
+
+        <div class="seats">
+            <p>Select Seats:</p>
+            <div id="seatContainer"></div>
+        </div>
+
+        <button type="submit">Confirm Booking</button>
+    </form>
+
+    <!-- Booking List -->
+    <h2>Bookings</h2>
+    <button onclick="loadBookings()">Show Bookings</button>
+    <div id="bookingList"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
