@@ -1,0 +1,58 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #e3f2fd, #fce4ec);
+}
+
+/* Content card */
+.ui-content {
+    background: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.ui-header {
+    background: #5c6bc0 !important;
+    color: white !important;
+    border: none;
+}
+
+.ui-header h1 {
+    color: white !important;
+}
+
+/* Labels */
+label {
+    font-weight: 600;
+    margin-top: 10px;
+}
+
+/* Inputs */
+input, textarea {
+    border-radius: 10px !important;
+}
+
+/* Toggle switch spacing */
+#recommend {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+
+/* Button styling */
+.ui-btn-b {
+    background: #ff7043 !important;
+    border: none !important;
+    border-radius: 10px !important;
+    font-size: 16px;
+}
+
+.ui-btn-b:hover {
+    background: #f4511e !important;
+}
+
+/* Add spacing between fields */
+form > * {
+    margin-bottom: 12px;
+}
