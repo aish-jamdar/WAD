@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Users</title>
+
+<style>
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#43cea2,#185a9d);
+  margin:0;
+  padding:20px;
+  color:white;
+}
+
+.top {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+button {
+  padding:10px;
+  border:none;
+  background:#ff7e5f;
+  color:white;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+table {
+  width:100%;
+  background:white;
+  color:black;
+  border-collapse:collapse;
+  margin-top:20px;
+  border-radius:10px;
+  overflow:hidden;
+}
+
+th, td {
+  padding:12px;
+  text-align:center;
+}
+
+th {
+  background:#ff7e5f;
+  color:white;
+}
+
+tr:nth-child(even) {
+  background:#f2f2f2;
+}
+</style>
+</head>
+
+<body>
+
+<div class="top">
+  <h2>Registered Users</h2>
+  <button onclick="goBack()">Add New</button>
+</div>
+
+<table>
+<thead>
+<tr>
+<th>First Name</th>
+<th>Last Name</th>
+<th>DOB</th>
+<th>Gender</th>
+<th>Mobile</th>
+<th>Email</th>
+</tr>
+</thead>
+
+<tbody id="userTable"></tbody>
+</table>
+
+<script>
+function goBack(){
+  window.location.href = "index.html";
+}
+
+let users = JSON.parse(localStorage.getItem("users")) || [];
+let table = document.getElementById("userTable");
+
+if(users.length === 0){
+  table.innerHTML = "<tr><td colspan='6'>No users registered</td></tr>";
+}else{
+  users.forEach(u=>{
+    table.innerHTML += `
+    <tr>
+      <td>${u.fname}</td>
+      <td>${u.lname}</td>
+      <td>${u.dob}</td>
+      <td>${u.gender}</td>
+      <td>${u.mobile}</td>
+      <td>${u.email}</td>
+    </tr>`;
+  });
+}
+</script>
+
+</body>
+</html>
