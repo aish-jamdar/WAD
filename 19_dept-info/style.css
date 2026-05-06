@@ -1,0 +1,30 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    text-align: center;
+}
+
+.dept-box {
+    background-color: #4a6fb5;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+/* FIXED BUTTON STYLE */
+.btn-box {
+    width: 100%;
+}
+
+.btn-box a {
+    display: block;              /* makes it full width */
+    width: 100% !important;      /* override jQuery Mobile */
+    padding: 12px 0 !important;
+    background-color: #f07c2b !important;
+    color: white !important;
+    border-radius: 10px !important;
+    text-align: center;
+    font-weight: bold;
+}
