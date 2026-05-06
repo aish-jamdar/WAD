@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Department App</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+    <div data-role="header">
+        <h1>Departments</h1>
+    </div>
+
+    <div data-role="content">
+        <div class="grid-container">
+
+            <!-- Names -->
+            <div class="dept-box">IT</div>
+            <div class="dept-box">COMP</div>
+            <div class="dept-box">ETC</div>
+            <div class="dept-box">MECH</div>
+            <div class="dept-box">ELECT</div>
+
+            <!-- Buttons -->
+            <div class="btn-box"><a href="#" class="dept-btn" data-dept="it">Button</a></div>
+            <div class="btn-box"><a href="#" class="dept-btn" data-dept="comp">Button</a></div>
+            <div class="btn-box"><a href="#" class="dept-btn" data-dept="etc">Button</a></div>
+            <div class="btn-box"><a href="#" class="dept-btn" data-dept="mech">Button</a></div>
+            <div class="btn-box"><a href="#" class="dept-btn" data-dept="elect">Button</a></div>
+
+        </div>
+    </div>
+</div>
+
+<!-- COMMON INFO PAGE -->
+<div data-role="page" id="infoPage">
+    <div data-role="header">
+        <h1 id="deptTitle"></h1>
+    </div>
+
+    <div data-role="content">
+        <p id="deptInfo"></p>
+        <a href="#home" data-role="button">Back</a>
+    </div>
+</div>
+
+</body>
+</html>
