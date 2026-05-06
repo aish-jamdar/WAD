@@ -1,0 +1,165 @@
+GITHUB VERSION CONTROL – COMPLETE STEP BY STEP GUIDE
+
+--------------------------------------------------
+
+PART 1: CREATE GITHUB ACCOUNT
+
+1. Open browser
+2. Go to: https://github.com
+3. Click on "Sign up"
+4. Enter:
+   - Email
+   - Password
+   - Username
+5. Verify your account (email/OTP)
+6. Login to your GitHub account
+
+--------------------------------------------------
+
+PART 2: INSTALL GIT (IF NOT INSTALLED)
+
+1. Go to: https://git-scm.com/downloads
+2. Download Git for your system (Windows)
+3. Install it (keep clicking "Next")
+4. After installation, open Command Prompt (CMD)
+5. Type:
+   git --version
+6. If version shows → Git is installed successfully
+
+--------------------------------------------------
+
+PART 3: SET UP GIT (FIRST TIME ONLY)
+
+Open CMD and type:
+
+git config --global user.name "Your Name"
+git config --global user.email "your-email@example.com"
+
+Example:
+git config --global user.name "Aishwarya"
+git config --global user.email "aish@gmail.com"
+
+--------------------------------------------------
+
+PART 4: CREATE A REPOSITORY ON GITHUB
+
+1. Go to GitHub website
+2. Click "+" (top right corner)
+3. Click "New repository"
+4. Enter:
+   - Repository name (example: my-project)
+   - Description (optional)
+5. Select "Public"
+6. Click "Create repository"
+
+--------------------------------------------------
+
+PART 5: CREATE PROJECT FOLDER IN COMPUTER
+
+1. Create a new folder on your desktop
+   Example: my-project
+2. Put your code files inside this folder
+
+--------------------------------------------------
+
+PART 6: OPEN TERMINAL IN PROJECT FOLDER
+
+Method:
+1. Open the folder
+2. Right click → Open in Terminal / CMD
+
+--------------------------------------------------
+
+PART 7: INITIALIZE GIT
+
+Type this:
+
+git init
+
+This starts Git in your project
+
+--------------------------------------------------
+
+PART 8: ADD FILES TO GIT
+
+To add all files:
+
+git add .
+
+--------------------------------------------------
+
+PART 9: COMMIT FILES
+
+Type:
+
+git commit -m "First commit"
+
+(This saves your code version)
+
+--------------------------------------------------
+
+PART 10: CONNECT TO GITHUB REPOSITORY
+
+Copy repository URL from GitHub
+
+Then type:
+
+git remote add origin https://github.com/your-username/repo-name.git
+
+Example:
+git remote add origin https://github.com/aishwarya/my-project.git
+
+--------------------------------------------------
+
+PART 11: PUSH CODE TO GITHUB
+
+Type:
+
+git branch -M main
+git push -u origin main
+
+--------------------------------------------------
+
+PART 12: LOGIN AUTHENTICATION
+
+If asked:
+- Enter GitHub username
+- Enter password or token
+
+--------------------------------------------------
+
+PART 13: VERIFY UPLOAD
+
+1. Go to GitHub
+2. Open your repository
+3. You will see your files uploaded
+
+--------------------------------------------------
+
+PART 14: FUTURE UPDATES (VERY IMPORTANT)
+
+Whenever you change code:
+
+Step 1:
+git add .
+
+Step 2:
+git commit -m "Updated code"
+
+Step 3:
+git push
+
+--------------------------------------------------
+
+SUMMARY (SHORT VERSION)
+
+1. git init
+2. git add .
+3. git commit -m "message"
+4. git remote add origin URL
+5. git push -u origin main
+
+--------------------------------------------------
+
+END OF FILE
+--------------------------------------------------

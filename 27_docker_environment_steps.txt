@@ -1,0 +1,156 @@
+DOCKER CONTAINER ENVIRONMENT – COMPLETE STEP BY STEP GUIDE
+
+--------------------------------------------------
+
+PART 1: WHAT IS DOCKER (SIMPLE)
+
+Docker is a tool that helps you run applications in containers.
+A container is like a small package that has:
+- Your app
+- Required software
+- Dependencies
+
+--------------------------------------------------
+
+PART 2: INSTALL DOCKER
+
+1. Go to: https://www.docker.com/products/docker-desktop
+2. Download Docker Desktop (Windows)
+3. Install it (click Next → Next)
+4. Restart your system if asked
+5. Open Docker Desktop
+
+--------------------------------------------------
+
+PART 3: VERIFY INSTALLATION
+
+Open CMD and type:
+
+docker --version
+
+If version shows → Docker installed successfully
+
+--------------------------------------------------
+
+PART 4: BASIC DOCKER COMMANDS
+
+Check Docker is running:
+
+docker info
+
+List running containers:
+
+docker ps
+
+List all containers:
+
+docker ps -a
+
+--------------------------------------------------
+
+PART 5: PULL DOCKER IMAGE
+
+Image = ready-made template
+
+Example (pull Ubuntu image):
+
+docker pull ubuntu
+
+--------------------------------------------------
+
+PART 6: RUN CONTAINER
+
+To start a container:
+
+docker run -it ubuntu
+
+(it = interactive mode)
+
+--------------------------------------------------
+
+PART 7: WORK INSIDE CONTAINER
+
+Now you are inside Ubuntu container
+
+Try commands:
+
+ls
+pwd
+echo "Hello Docker"
+
+--------------------------------------------------
+
+PART 8: EXIT CONTAINER
+
+Type:
+
+exit
+
+--------------------------------------------------
+
+PART 9: START STOP CONTAINER
+
+Start container:
+
+docker start container_id
+
+Stop container:
+
+docker stop container_id
+
+--------------------------------------------------
+
+PART 10: CREATE YOUR OWN IMAGE (DOCKERFILE)
+
+1. Create a file named Dockerfile
+
+Example:
+
+FROM ubuntu
+RUN apt update
+CMD ["echo", "Hello from Docker"]
+
+--------------------------------------------------
+
+PART 11: BUILD IMAGE
+
+docker build -t myimage .
+
+--------------------------------------------------
+
+PART 12: RUN YOUR IMAGE
+
+docker run myimage
+
+--------------------------------------------------
+
+PART 13: REMOVE CONTAINER
+
+docker rm container_id
+
+--------------------------------------------------
+
+PART 14: REMOVE IMAGE
+
+docker rmi image_name
+
+--------------------------------------------------
+
+SUMMARY
+
+Pull Image:
+docker pull ubuntu
+
+Run Container:
+docker run -it ubuntu
+
+Build Image:
+docker build -t myimage .
+
+Run Image:
+docker run myimage
+
+--------------------------------------------------
+
+END OF FILE
+--------------------------------------------------
