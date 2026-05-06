@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* List images */
+.ui-listview img {
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+}
+
+/* Detail page styling */
+.detail-page {
+    text-align: center;
+}
+
+.detail-img {
+    width: 90%;
+    max-width: 300px;
+    border-radius: 15px;
+    margin: 15px 0;
+}
+
+.price {
+    font-size: 20px;
+    color: green;
+    font-weight: bold;
+}
+
+/* Header styling */
+.ui-header {
+    background-color: #ff7043 !important;
+    color: white !important;
+}
