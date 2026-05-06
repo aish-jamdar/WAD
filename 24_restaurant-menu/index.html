@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Menu</title>
+
+    <!-- jQuery Mobile CDN -->
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- HOME PAGE -->
+<div data-role="page" id="home">
+
+    <div data-role="header" data-theme="b">
+        <h1>🍽️ My Restaurant</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <ul data-role="listview" data-inset="true">
+
+            <li>
+                <a href="#pizza">
+                    <img src="images/pizza.jpg">
+                    <h2>Pizza</h2>
+                    <p>Cheesy & delicious</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#burger">
+                    <img src="images/burger.jpg">
+                    <h2>Burger</h2>
+                    <p>Juicy & crispy</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#pasta">
+                    <img src="images/pasta.jpg">
+                    <h2>Pasta</h2>
+                    <p>Italian special</p>
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+</div>
+
+<!-- PIZZA PAGE -->
+<div data-role="page" id="pizza">
+
+    <div data-role="header" data-theme="b">
+        <a href="#home" data-icon="back">Back</a>
+        <h1>Pizza</h1>
+    </div>
+
+    <div class="ui-content detail-page">
+        <img src="images/pizza.jpg" class="detail-img">
+        <h2>Cheese Burst Pizza</h2>
+        <p>Loaded with cheese, olives, and veggies.</p>
+        <p class="price">₹250</p>
+    </div>
+
+</div>
+
+<!-- BURGER PAGE -->
+<div data-role="page" id="burger">
+
+    <div data-role="header" data-theme="b">
+        <a href="#home" data-icon="back">Back</a>
+        <h1>Burger</h1>
+    </div>
+
+    <div class="ui-content detail-page">
+        <img src="images/burger.jpg" class="detail-img">
+        <h2>Chicken Burger</h2>
+        <p>Grilled chicken patty with fresh lettuce.</p>
+        <p class="price">₹150</p>
+    </div>
+
+</div>
+
+<!-- PASTA PAGE -->
+<div data-role="page" id="pasta">
+
+    <div data-role="header" data-theme="b">
+        <a href="#home" data-icon="back">Back</a>
+        <h1>Pasta</h1>
+    </div>
+
+    <div class="ui-content detail-page">
+        <img src="images/pasta.jpg" class="detail-img">
+        <h2>White Sauce Pasta</h2>
+        <p>Creamy Alfredo pasta with herbs.</p>
+        <p class="price">₹200</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
